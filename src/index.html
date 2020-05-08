@@ -4,72 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test_form</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form action="#" method="GET"> <!-- обозначение самой формы,все поля в ней-->
+    <section class="test_form">
+        <form action="#" method="GET"> <!-- обозначение самой формы,все поля в ней-->
+            
+            <div class="username">
+                <p>Имя пользователя</p>
+                <input tabindex="1" name="username" type="text"> <!-- ввод текста который передаеться на сервер -->
+            </div>
+            <div class="password">
+                <p>Пароль</p>
+                <input tabindex="2" name="password" type="password">
+            </div>
+            <div class="pnumber">
+                <p>Номер телефона</p>
+                <input tabindex="3" name="pnumber" type="tel"> <!-- тип-тел,позволяет клавиатуре на моб. переключаться на цифры сразу -->
+            </div>
+
+            <div class="gender">
+                <p>Пол</p>
+                <div class="male">
+                    <input tabindex="4" checked name="gender" type="radio" value="male">Мужской <!-- радио-кнопки (или или) -->
+                </div>
+                <div class="female">
+                    <input tabindex="4" name="gender" type="radio" value="female">Женский
+                </div>
+            </div>
+
+            <div class="property">
+                <p>Имущество</p>
+                <div class="property_checkbox_1">
+                    <input checked name="bike" type="checkbox" value="yes">Велосипед <!-- чекбоксы,т.е можно ставить  галочки -->
+                </div>
+                <div class="property_checkbox_2">
+                    <input name="car" type="checkbox" value="yes">Машина
+                </div>
+                <div class="property_checkbox_3">
+                    <input disabled name="house" type="checkbox" value="yes">Квартира
+                </div>
+            </div>
+
+            <div class="information">
+                <p>Дополнительная информация</p> <!-- текстареа большое поле для ввода какой то доп. информации -->
+                <textarea tabindex="5" name="text"></textarea>
+            </div>
+            
+            <div class="attach_img">
+                <p>Прикрепить фото</p>
+                <input name="userphoto" type="file"> <!-- поле для прикрепления фото/файла -->
+            </div>
+
+            <div class="likecolor">
+                <p>Любимый цвет</p>
+                <select name="color">
+                    <option value="red">Красный</option> <!-- всплывающее меню,атрибут селектед-выбраный по умолч. -->
+                    <option value="blue">Голубой</option>
+                    <option selected value="yellow">Желтый</option>
+                </select>
+            </div>
         
-        <div class="username">
-            <p>Имя пользователя</p>
-            <input tabindex="1" name="username" type="text"> <!-- ввод текста который передаеться на сервер -->
-        </div>
-        <div class="password">
-            <p>Пароль</p>
-            <input tabindex="2" name="password" type="password">
-        </div>
-        <div class="pnumber">
-            <p>Номер телефона</p>
-            <input tabindex="3" name="pnumber" type="tel"> <!-- тип-тел,позволяет клавиатуре на моб. переключаться на цифры сразу -->
-        </div>
-
-        <div class="gender">
-            <p>Пол</p>
-            <div class="male">
-                <input tabindex="4" checked name="gender" type="radio" value="male">Мужской <!-- радио-кнопки (или или) -->
+            <div class="actions">
+                <p>Действия</p>
+                <button type="submit" class="actions_submit">Отправить</button>
+                <button type="reset" class="actions_reset">Очистить</button>
             </div>
-            <div class="female">
-                <input tabindex="4" name="gender" type="radio" value="female">Женский
-            </div>
-        </div>
 
-        <div class="property">
-            <p>Имущество</p>
-            <div class="property_checkbox_1">
-                <input checked name="bike" type="checkbox" value="yes">Велосипед <!-- чекбоксы,т.е можно ставить  галочки -->
-            </div>
-            <div class="property_checkbox_2">
-                <input name="car" type="checkbox" value="yes">Машина
-            </div>
-            <div class="property_checkbox_3">
-                <input disabled name="house" type="checkbox" value="yes">Квартира
-            </div>
-        </div>
-
-        <div class="information">
-            <p>Дополнительная информация</p> <!-- текстареа большое поле для ввода какой то доп. информации -->
-            <textarea tabindex="5" name="text"></textarea>
-        </div>
-        
-        <div class="attach_img">
-            <p>Прикрепить фото</p>
-            <input name="userphoto" type="file"> <!-- поле для прикрепления фото/файла -->
-        </div>
-
-        <div class="likecolor">
-            <p>Любимый цвет</p>
-            <select name="color">
-                <option value="red">Красный</option> <!-- всплывающее меню,атрибут селектед-выбраный по умолч. -->
-                <option value="blue">Голубой</option>
-                <option selected value="yellow">Желтый</option>
-            </select>
-        </div>
-        
-        <div class="actions">
-            <p>Действия</p>
-            <button type="submit" class="actions_submit">Отправить</button>
-            <button type="reset" class="actions_reset">Очистить</button>
-
-        </div>
-
-    </form>    
+        </form>
+    </section>    
 </body>
 </html>

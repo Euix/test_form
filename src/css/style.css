@@ -1,0 +1,11 @@
+section.test_form {
+    display: flex;
+    min-height: 800px;
+    background: url(https://images.wallpaperscraft.ru/image/skaly_voda_oblaka_168832_1920x1080.jpg) center center/cover no-repeat;
+    text-align: center;
+}
+
+.username {
+    font-size: 20px;
+    color:yellow;
+}
